@@ -2,7 +2,7 @@ class Solution {
 public:
     bool check(vector<int>& nums) {
        
-      //updated 
+      //updated to /Array
         int num = nums.size();
         int arr[num];
 

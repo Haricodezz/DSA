@@ -43,7 +43,7 @@ public:
                 break;
             }
             int mid = low + (high - low) / 2;
-            target = min(nums[mid], target);
+  
             if (nums[low] <= nums[mid]) {
                target = min(target,nums[low]);
 

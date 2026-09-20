@@ -9,13 +9,13 @@ public:
 
         return maxi;
     }
-int totalBouquet(vector<int> &arr,int m,int k,int days){
+int totalBouquet(vector<int> &arr,int k,int days){
 
     int n = arr.size();
     int bloom = 0;
  int b=0;
     for (int i = 0; i < n; i++) {
-        if( days / arr[i]) bloom++;
+        if(arr[i]<=days) bloom++;
         else{
             b+=bloom/k;
 
@@ -37,7 +37,7 @@ int minDays(vector<int>& bloomDay, int m, int k) {
 
         int mid = low + (high - low) / 2;
 
-        if (totalBouquet(bloomDay,m, k, mid) < m) {
+        if (totalBouquet(bloomDay, k, mid) < m) {
             low = mid + 1;
 
         } else {

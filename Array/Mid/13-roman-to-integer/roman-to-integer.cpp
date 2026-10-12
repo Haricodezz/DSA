@@ -10,7 +10,7 @@ public:
         mp['C'] = 100;
         mp['D'] = 500;
         mp['M'] = 1000;
-        int sub = 0;
+    
         int i=0;
         for (i = 0; i < s.size() - 1; i++) {
            

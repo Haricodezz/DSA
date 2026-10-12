@@ -11,24 +11,18 @@ public:
         mp['D'] = 500;
         mp['M'] = 1000;
         int sub = 0;
-        for (int i = 0; i < s.size() - 1; i++) {
-            if (sub != 0) {
-                ans = ans + mp[s[i]] - sub;
-                sub = 0;
-                continue;
-            }
+        int i=0;
+        for (i = 0; i < s.size() - 1; i++) {
+           
             if (mp[s[i]] >= mp[s[i + 1]]) {
                 ans += mp[s[i]];
             } else {
-                sub = mp[s[i]];
+                ans=ans+mp[s[i+1]]- mp[s[i]];
+                i++;
             }
         }
-        if (sub != 0) {
-                ans = ans + mp[s[s.size() - 1]] - sub;
-                
-            }else{
-                ans+=mp[s[s.size() - 1]];
-            }
+        if(i==s.size()-1 )ans+=mp[s[i]];
+        
         return ans;
     }
 };

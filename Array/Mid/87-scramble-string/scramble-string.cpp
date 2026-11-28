@@ -38,14 +38,7 @@ public:
             return true;
        
        
-        int n;
-        if (s1.size() > s2.size()) {
-            n = s1.size();
-
-        } else {
-            n = s2.size();
-        }
-
+       
         int freq[26] = {0};
 
         for (char ch : s1) {

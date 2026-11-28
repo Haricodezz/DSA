@@ -32,13 +32,11 @@ public:
     }
 
     bool isScramble(string s1, string s2) {
-         if (s1.size() != s2.size())
+        if (s1.size() != s2.size())
             return false;
         if (s1.size() == 0 && s2.size() == 0)
             return true;
-       
-       
-       
+
         int freq[26] = {0};
 
         for (char ch : s1) {
@@ -52,7 +50,6 @@ public:
             }
         }
 
-      
         unordered_map<string, bool> dp;
 
         return solve(s1, s2, dp);
